@@ -59,16 +59,26 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px; /* slightly reduced padding to fit logo */
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Updated Logo with Image styling */
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* space between image and text */
     font-family: var(--font-body);
     letter-spacing: 2px;
     font-size: 1.1rem;
     font-weight: 700;
+}
+
+.nav-logo-img {
+    height: 40px; /* strict height so it doesn't break navbar */
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -167,7 +177,7 @@ nav {
     text-shadow: 0 2px 10px rgba(255,255,255,0.8);
 }
 
-/* Elegant Text Link instead of bulky button */
+/* Elegant Text Link */
 .hero-text-link {
     font-size: 1rem;
     letter-spacing: 2px;
@@ -430,6 +440,17 @@ footer {
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
+    /* Adjusted logo for smaller screens */
+    .logo {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        gap: 8px;
+    }
+    
+    .nav-logo-img {
+        height: 30px;
+    }
+
     .menu-toggle {
         display: flex;
     }
@@ -488,4 +509,4 @@ footer {
     .swipe-hint {
         display: block; /* Show hint on mobile */
     }
-}
+    }
